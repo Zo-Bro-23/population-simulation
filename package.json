@@ -1,0 +1,30 @@
+{
+  "name": "population-simulation",
+  "version": "1.0.0",
+  "description": "NPM package that runs population simulations based on Hardy-Weinberg principles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zo-Bro-23/population-simulation.git"
+  },
+  "keywords": [
+    "population",
+    "simulation",
+    "hardy-weinberg",
+    "biology",
+    "genetics",
+    "ap bio"
+  ],
+  "author": "Zohan Subhash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zo-Bro-23/population-simulation/issues"
+  },
+  "homepage": "https://github.com/Zo-Bro-23/population-simulation#readme",
+  "publishConfig": {
+    "tag": "latest"
+  }
+}
