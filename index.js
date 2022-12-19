@@ -1,11 +1,11 @@
-const { singleExport } = require('./singleGeneration')
-const { multiExport } = require('./multiGeneration')
+const singleGeneration = require('./singleGeneration')
+const multiGeneration = require('./multiGeneration')
 const dynamicGeneration = require('./dynamicGeneration')
 const nonEquilibrium = require('./nonEquilibrium')
 
 module.exports = {
-    singleGeneration: singleExport,
-    multiGeneration: multiExport,
+    singleGeneration,
+    multiGeneration,
     dynamicGeneration,
     nonEquilibrium
 }
