@@ -1,9 +1,10 @@
 const populationSimulation = require('./index')
-const results = populationSimulation.nonEquilibrium(0.6, 10000000, 10, [0.1, 1], {
+const { multiGeneration } = require('./multiGeneration')
+const results = multiGeneration(0.6, 2, 10, 5, {
     survivalRate: {
         pp: 1,
         pq: 1,
-        qq: 1
+        qq: 0.5
     }
 })
 
