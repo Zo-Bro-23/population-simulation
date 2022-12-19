@@ -32,7 +32,7 @@ const populationSimulation = require('population-simulation')
 console.log(populationSimulation.nonEquilibrium())
 ```
 ### Expected results:
-```json
+```js
 {
   pp: 0.4030500800910788,
   pq: 0.4721005043752234,
