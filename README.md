@@ -102,4 +102,4 @@ singleGeneration(p, starting, offspring)
 ```
 
 
-There is currently no error handling in place. You can skip all inputs (they are optional), but if you choose to give an input and it's not in the format specified above, I can't predict what the program will do.
+**Note: There is currently no error handling in place. You can skip all inputs (they are optional), but if you choose to give an input and it's not in the format specified above, I can't predict what the program will do.**
