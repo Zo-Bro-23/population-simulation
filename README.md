@@ -8,6 +8,7 @@ NPM package that runs population (genetics) simulations based on Hardy-Weinberg 
     - [Code](#code)
     - [Expected Results](#expected-results)
 - [Documentation](#documentation)
+    - [Other Functions](#other-functions)
 
 ## Installation
 ### For Devs
@@ -82,4 +83,23 @@ limitPopulation = "Will limit the population after each generation so that the s
 verbose = "Prints the results after each generation (except the last) - Use for debugging and for advanced analysis"
 /* */
 ```
+### Other Functions
+```js
+dynamicGeneration(p, starting, offspring, generations, variation, limitPopulation, verbose)
+```
+```nonEquilibrium()``` with ```survivalRate = { pp: 1, pq: 1, qq: 1 }```
+
+
+```js
+multiGeneration(p, starting, offspring, generations, limitPopulation, verbose)
+```
+```dynamicGeneration()``` with ```variation = [0.0, 0]```
+
+
+```js
+singleGeneration(p, starting, offspring)
+```
+```multiGeneration()``` with ```generations = 1```
+
+
 There is currently no error handling in place. You can skip all inputs (they are optional), but if you choose to give an input and it's not in the format specified above, I can't predict what the program will do.
