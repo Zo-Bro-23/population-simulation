@@ -1,5 +1,5 @@
-# population-simulation
-NPM package that runs population simulations based on Hardy-Weinberg principles.
+# Population-Simulation
+NPM package that runs population (genetics) simulations based on Hardy-Weinberg principles.
 
 - [Installation](#installation)
     - [For Devs](#for-devs)

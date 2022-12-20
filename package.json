@@ -1,7 +1,7 @@
 {
   "name": "population-simulation",
-  "version": "1.0.0",
-  "description": "NPM package that runs population simulations based on Hardy-Weinberg principles",
+  "version": "1.0.1",
+  "description": "NPM package that runs population (genetics) simulations based on Hardy-Weinberg principles",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
