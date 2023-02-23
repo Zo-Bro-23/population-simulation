@@ -1,13 +1,14 @@
 # Population-Simulation
 NPM package that runs population (genetics) simulations based on Hardy-Weinberg principles.
 
-- [Installation](#installation)
+- [Population-Simulation](#population-simulation)
+  - [Installation](#installation)
     - [For Devs](#for-devs)
     - [For Beginners](#for-beginners)
-- [Sample Code](#sample-code)
-    - [Code](#code)
-    - [Expected Results](#expected-results)
-- [Documentation](#documentation)
+  - [Sample Code](#sample-code)
+    - [Code:](#code)
+    - [Expected results:](#expected-results)
+  - [Documentation](#documentation)
     - [Other Functions](#other-functions)
 
 ## Installation
@@ -62,11 +63,11 @@ console.log(populationSimulation.nonEquilibrium())
 ## Documentation
 ```js
 // Simulates a population that is not in Hardy-Weinberg Equilibrium
-nonEquilibrium(p = 0.6, starting = 20000, offspring = 2, generations = 3, variation = [0.01, 3], survivalRate = {
+nonEquilibrium({ p = 0.6, starting = 20000, offspring = 2, generations = 3, variation = [0.01, 3], survivalRate = {
     pp: 1,
     pq: 1,
     qq: 0.9
-}, limitPopulation = false, verbose = false)
+}, limitPopulation = false, verbose = false })
 
 /* Parameters */
 p = "The initial frequency of the dominant allele (0-1)"
@@ -80,24 +81,24 @@ survivalRate = {
     qq: "Same for qq (0-1)"
 }
 limitPopulation = "Will limit the population after each generation so that the simulation doesn't run for months on end"
-verbose = "Prints the results after each generation (except the last) - Use for debugging and for advanced analysis"
+verbose = "Expects callback - Will pass the results after each generation (except the last) - Use for debugging and for advanced analysis"
 /* */
 ```
 ### Other Functions
 ```js
-dynamicGeneration(p, starting, offspring, generations, variation, limitPopulation, verbose)
+dynamicGeneration({ p, starting, offspring, generations, variation, limitPopulation, verbose })
 // nonEquilibrium() with survivalRate = { pp: 1, pq: 1, qq: 1 }
 ```
 
 
 ```js
-multiGeneration(p, starting, offspring, generations, limitPopulation, verbose)
+multiGeneration({ p, starting, offspring, generations, limitPopulation, verbose })
 // dynamicGeneration() with variation = [0.0, 0]
 ```
 
 
 ```js
-singleGeneration(p, starting, offspring)
+singleGeneration({ p, starting, offspring })
 // multiGeneration() with generations = 1
 ```
 

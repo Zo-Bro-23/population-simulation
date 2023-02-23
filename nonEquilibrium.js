@@ -76,7 +76,7 @@ function nonEquilibrium(options) {
 
         if (xindex < generations) {
             if (verbose) {
-                console.log(processResults(results))
+                verbose(processResults(results))
             }
             return singleGeneration((results.pp * 2 + results.pq) / (totalOffspring * 2), offspring, limitPopulation ? starting : totalOffspring, xindex + 1)
         } else {
