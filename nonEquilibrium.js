@@ -14,7 +14,7 @@ function nonEquilibrium(options) {
         verbose = false
     } = options
 
-    return processResults(singleGeneration(p, starting, 1, 0))
+    return processResults(singleGeneration(p, starting, 1, 1))
 
     function singleGeneration(xp, xoffspring, xgenerations, xindex) {
         let results = {
