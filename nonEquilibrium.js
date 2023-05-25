@@ -1,10 +1,20 @@
-function nonEquilibrium(p = 0.6, starting = 20000, offspring = 2, generations = 3, variation = [0.01, 3], survivalRate = {
-    pp: 1,
-    pq: 1,
-    qq: 0.9
-}, limitPopulation = false, verbose = false) {
+function nonEquilibrium(options) {
+    const {
+        p = 0.6,
+        starting = 20000,
+        offspring = 2,
+        generations = 3,
+        variation = [0.01, 3],
+        survivalRate = {
+            pp: 1,
+            pq: 1,
+            qq: 0.9
+        },
+        limitPopulation = false,
+        verbose = false
+    } = options
 
-    return processResults(singleGeneration(p, starting, 1, 0))
+    return processResults(singleGeneration(p, starting, 1, 1))
 
     function singleGeneration(xp, xoffspring, xgenerations, xindex) {
         let results = {
@@ -66,7 +76,7 @@ function nonEquilibrium(p = 0.6, starting = 20000, offspring = 2, generations = 
 
         if (xindex < generations) {
             if (verbose) {
-                console.log(processResults(results))
+                verbose(processResults(results))
             }
             return singleGeneration((results.pp * 2 + results.pq) / (totalOffspring * 2), offspring, limitPopulation ? starting : totalOffspring, xindex + 1)
         } else {
